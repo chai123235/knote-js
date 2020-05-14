@@ -18,7 +18,8 @@ async function initMongo() {
         useUnifiedTopology: true,
       })
       success = true
-    } catch {
+    } 
+      catch{
       console.log('Error connecting to MongoDB, retrying in 1 second')
       await new Promise(resolve => setTimeout(resolve, 1000))
     }
